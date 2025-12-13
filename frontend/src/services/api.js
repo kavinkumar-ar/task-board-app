@@ -1,14 +1,10 @@
-import axios from 'axios';
+import axios from "axios";
 
-const API_BASE_URL = 'process.env.https://task-board-app-bice.vercel.app+"/api/data"';
+const API = process.env.REACT_APP_API_URL;
 
+axios.get(`${API}/data`)
+  .then(res => console.log(res.data));
 
-const api = axios.create({
-  baseURL: API_BASE_URL,
-  headers: {
-    'Content-Type': 'application/json',
-  },
-});
 
 // Get all tasks
 export const getTasks = async () => {
