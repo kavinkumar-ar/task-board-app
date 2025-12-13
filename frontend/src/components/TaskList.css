@@ -1,0 +1,18 @@
+.task-list {
+  display: flex;
+  gap: 16px;
+  padding: 0 16px;
+  overflow-x: auto;
+  min-height: 400px;
+}
+
+@media (max-width: 768px) {
+  .task-list {
+    flex-direction: column;
+  }
+  
+  .task-list .status-column {
+    margin: 0 0 16px 0;
+  }
+}
+
