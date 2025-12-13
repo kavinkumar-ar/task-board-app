@@ -1,0 +1,115 @@
+.stats-summary {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.stats-title {
+  margin: 0 0 16px 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px;
+}
+
+.stat-card {
+  background: #f5f5f5;
+  border-radius: 6px;
+  padding: 16px;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.stat-value {
+  font-size: 32px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.stat-label {
+  font-size: 12px;
+  color: #666;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.stat-card.status-todo {
+  background: #e0e0e0;
+}
+
+.stat-card.status-todo .stat-value {
+  color: #616161;
+}
+
+.stat-card.status-in-progress {
+  background: #e3f2fd;
+}
+
+.stat-card.status-in-progress .stat-value {
+  color: #2196f3;
+}
+
+.stat-card.status-done {
+  background: #e8f5e9;
+}
+
+.stat-card.status-done .stat-value {
+  color: #4caf50;
+}
+
+.stat-card.status-overdue {
+  background: #ffebee;
+}
+
+.stat-card.status-overdue .stat-value {
+  color: #f44336;
+}
+
+.stat-card.status-due-today {
+  background: #fff3e0;
+}
+
+.stat-card.status-due-today .stat-value {
+  color: #ff9800;
+}
+
+.stat-card.status-due-soon {
+  background: #fff9c4;
+}
+
+.stat-card.status-due-soon .stat-value {
+  color: #fbc02d;
+}
+
+.stat-card.status-reminder {
+  background: #f3e5f5;
+}
+
+.stat-card.status-reminder .stat-value {
+  color: #9c27b0;
+}
+
+@media (max-width: 768px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stat-value {
+    font-size: 28px;
+  }
+}
+
