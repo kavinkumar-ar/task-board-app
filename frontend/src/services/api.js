@@ -1,9 +1,14 @@
-import axios from "axios";
+import axios from 'axios';
 
-const API = process.env.REACT_APP_API_URL;
+// Use environment variable for production, fallback to localhost for development
+const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:3001/api';
 
-axios.get(`${API}/data`)
-  .then(res => console.log(res.data));
+const api = axios.create({
+  baseURL: API_BASE_URL,
+  headers: {
+    'Content-Type': 'application/json',
+  },
+});
 
 
 // Get all tasks
